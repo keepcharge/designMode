@@ -1,9 +1,6 @@
 package com.mine.common;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Auther: hetiao
@@ -12,6 +9,8 @@ import java.util.Set;
  */
 public class TotalElement {
     public static void main(String[] args) {
+        frequency();
+
         String[] array = new String[]{"aa","bb","cc","ac","aac","aaa","aa","aa"};
         //创建组装容器
         HashMap<String,Integer>  hashMap = new HashMap<>();
@@ -32,4 +31,16 @@ public class TotalElement {
 
 
     }
+
+
+    public static void  frequency(){
+        String strs = "zhangsan zhangsanfeng lisi lisi wangwu wangwuliu zhangwuji zhou zhouzhinuo";
+        System.out.println(strs);
+        List<String> tempList = Arrays.asList(strs.split(" "));
+        for(String stemp:tempList){
+            System.out.println(stemp+" ->出现次数:"+Collections.frequency(tempList, stemp));
+        }
+    }
+
+
 }
